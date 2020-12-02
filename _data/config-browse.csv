@@ -1,6 +1,21 @@
 field,display_name,btn,hidden,sort_name
-date,Date,,,Date
-creator,Creator,,,
-subject,,true
-location,,true
-identifier,,,true,Identifier
+object name,Name
+object description,Description
+comments,COMMENTS
+catalog number,CATALOG NUMBER
+site,SITE
+unit/quad,UNIT/QUAD
+area,AREA
+ctx,CTX
+sub ctx,SUB CTX
+mat class 1,MAT CLASS 1
+mat type 1,MAT TYPE 1
+mat class 2,MAT CLASS 2
+mat type 2,MAT TYPE 2
+object name,OBJECT NAME
+object description,OBJECT DESCRIPTION
+manufacture 1,MANUFACTURE 1
+manufacture 2,MANUFACTURE 2
+item count,ITEM COUNT
+portion represented,PORTION REPRESENTED
+length-height,Length or Height

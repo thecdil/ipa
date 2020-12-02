@@ -8,7 +8,7 @@
 #
 # featured image is used in home page banner and in meta markup to represent the collection
 # use either an objectid (from an item in this collect), a relative location of an image in this repo, or a full url to an image elsewhere
-featured-image: demo_001
+featured-image: https://southcentralus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=cr2&cs=fFNQTw&docid=https%3A%2F%2Fvandalsuidaho-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!xbpy1veifkeH5PXB2UDRtcsKaJBnikhFvlsaVfkUqm8u2nfb2mPpQ5oQfU69crw7%2Fitems%2F01VONDS6KF5EFPKNWXLFAKYHEYD5LCLCPS%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdmFuZGFsc3VpZGFoby1teS5zaGFyZXBvaW50LmNvbUA3ZWJjNmI2My01NzkyLTRhMTktYjIwYi0wNGI4MjYwNDg4NTMiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjA2ODU2NDAwIiwiZXhwIjoiMTYwNjg3ODAwMCIsImVuZHBvaW50dXJsIjoiMUhubkhYV283MXg3ZHdqSXVIMTlQME5ZWG95bjl3cm10akFMdWNUbTA3MD0iLCJlbmRwb2ludHVybExlbmd0aCI6IjEyMyIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6IlpEWTNNbUpoWXpVdFlUSm1OeTAwTnpkbExUZzNaVFF0WmpWak1XUTVOREJrTVdJMSIsIm5hbWVpZCI6IjAjLmZ8bWVtYmVyc2hpcHxkYmVja2VyQHVpZGFoby5lZHUiLCJuaWkiOiJtaWNyb3NvZnQuc2hhcmVwb2ludCIsImlzdXNlciI6InRydWUiLCJjYWNoZWtleSI6IjBoLmZ8bWVtYmVyc2hpcHwxMDAzN2ZmZTg0Zjc3ODcyQGxpdmUuY29tIiwidHQiOiIwIiwidXNlUGVyc2lzdGVudENvb2tpZSI6IjIifQ.ekhVTTMrZUhtQnBsVjc4TTdWZmlkWlk1RlJ3Yzd2YTdGVXFGQm45NjIzUT0&encodeFailures=1&srcWidth=&srcHeight=&width=2616&height=1292&action=Access
 # optional: add extra padding around collection title for a larger image feature. 
 home-title-y-padding: 12em # the margin from the top your title portion will appear.
 # optional: change position of background image, center, top, bottom
@@ -45,14 +45,14 @@ browse-buttons: true # true / false, adds previous/next arrows to items, but inc
 ##########
 # SUBJECTS PAGE
 #
-subjects-fields: subject;creator # set of fields separated by ; to be featured in the cloud (leave blank or comment out to not generate)
+subjects-fields: mat_class_1;mat_type_1;mat_class_2;mat_type_2;object_name;object_description;manufacture_1;manufacture_2 # set of fields separated by ; to be featured in the cloud (leave blank or comment out to not generate)
 subjects-min: 1 # min size for subject cloud, too many terms = slow load time!
 subjects-stopwords: # set of subjects separated by ; that will be removed from display, e.g. boxers;boxing
 
 ##########
 # LOCATIONS PAGE
 #
-locations-fields: location # set of fields separated by ; to be featured in the cloud (leave blank or comment out to not generate)
+locations-fields: mat_type_1;mat_type_2 # set of fields separated by ; to be featured in the cloud (leave blank or comment out to not generate)
 locations-min: 1 # min size for subject cloud, too many terms = slow load time!
 locations-stopwords: # set of subjects separated by ; that will be removed from display, e.g. boxers;boxing
 
@@ -80,9 +80,9 @@ year-nav-increment: 5 # set increments to auto gen nav years
 # 
 # add metadata fields for export in data downloads (tip: paste in first row of csv)
 # comma delimited list, reference url is automatic
-metadata-export-fields: "title,creator,date,description,subject,location,latitude,longitude,source,identifier,type,format,language,rights,rightsstatement"
+metadata-export-fields: "objectid,title,format,object_template,object_download,image_small,image_thumb,catalog_number,site,unit/quad,area,ctx,sub_ctx,mat_class_1,mat_type_1,mat_class_2,mat_type_2,object_name,object_description,manufacture_1,manufacture_2,item_count,portion_represented,associated_with_cat_no.,surface_feature,plastics__plastic_color_1,plastics__plastic_color_2,ceramic__paste_color,ceramic__glaze,ceramic__decoration_1,ceramic__decor_1_description,ceramic__decor_1_color,ceramic__decoration_2,ceramic__decor_2_description,ceramic__decor_2_color,ceramic__decoration_3,ceramic__decor_3_description,ceramic__decor_3_color,glass__glass_color,glass__container_shape,glass__finish_description_1,glass__finish_description_2,glass__base_description_1,glass__base_description_2,glass__shoulder_description,glass__neck_description,glass__decoration_1_glass,glass__decoration_2_glass,maker_mark,maker,maker_location,product,product_manufacturer,product_manufacturer_location,thickness/gauge,length-height,metal__nail_d_size,width,rim_diameter,base_diameter,date_start,date_end,comments,most_representative_photo,faunal__animal_class,faunal__species,faunal__body_part,faunal__element_category,faunal__element,faunal__tooth_listing,faunal__side,faunal__bone_modification,faunal__butchering_marks,faunal__quantity"
 # generate a facets list for given fields, comma delimited
-metadata-facets-fields: "subject,creator,format"
+metadata-facets-fields: "unit/quad,area,ctx,sub_ctx,mat_class_1,mat_type_1,mat_class_2,mat_type_2,object_name,object_description,manufacture_1,manufacture_2,item_count,portion_represented,associated_with_cat_no.,surface_feature,plastics__plastic_color_1,plastics__plastic_color_2,ceramic__paste_color,ceramic__glaze,ceramic__decoration_1,ceramic__decor_1_description,ceramic__decor_1_color,ceramic__decoration_2,ceramic__decor_2_description,ceramic__decor_2_color,ceramic__decoration_3,ceramic__decor_3_description,ceramic__decor_3_color,glass__glass_color,glass__container_shape,glass__finish_description_1,glass__finish_description_2,glass__base_description_1,glass__base_description_2,glass__shoulder_description,glass__neck_description,glass__decoration_1_glass,glass__decoration_2_glass,maker_mark,maker,maker_location,product,product_manufacturer,product_manufacturer_location,thickness/gauge,length-height,metal__nail_d_size,width,rim_diameter,base_diameter,date_start,date_end,comments,most_representative_photo,faunal__animal_class,faunal__species,faunal__body_part,faunal__element_category,faunal__element,faunal__tooth_listing,faunal__side,faunal__bone_modification,faunal__butchering_marks,faunal__quantity"
 
 ##########
 # ADVANCED OPTIONS
